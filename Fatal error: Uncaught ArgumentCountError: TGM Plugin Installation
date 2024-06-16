@@ -1,0 +1,7 @@
+Fatal error: Uncaught ArgumentCountError: TGM Plugin Installation
+
+Follow these instructions below.
+
+1.Let’s open the TGM class file named “class-tgm-plugin-activation.php”. You can find it inside your theme directory.
+2. Now search for “skin_update_successful” as shown below and remove onclick=”%2$s” at both places 
+
