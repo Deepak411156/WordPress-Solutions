@@ -1,0 +1,53 @@
+ERROR 1
+--------------------
+
+Can't Edit?
+Enable Safe Mode
+Having problems loading Elementor? Please enable Safe Mode to troubleshoot. Learn More
+
+Elementor ==> Tools
+Safe Mode	
+Disable
+Safe Mode allows you to troubleshoot issues by only loading the editor, without loading the theme or any other plugin.
+
+Enable
+
+Save changes
+
+
+**********************************************************************************************************************************
+
+EROOR 2
+--------------
+
+Safe Mode ON
+Disable Safe Mode
+Editor successfully loaded?
+The issue was probably caused by one of your plugins or theme. Click here to troubleshoot
+Still experiencing issues?
+Click here to troubleshoot
+
+
+
+METHOD - I
+
+$table_prefix = 'drishti_';
+
+WP-config.php
+
+/* Elementor WP Plugin Error Solution */
+define('WP_DEBUG', false);
+define('WP_HTTP_BLOCK_EXTERNAL', false);
+define('FS_METHOD', 'direct');
+define('DISABLE_WP_CRON', true);
+define('WP_MEMORY_LIMIT', '256M');
+define('WP_CACHE', true);
+define('WP_ALLOW_REPAIR', true);
+require_once(ABSPATH.'wp-settings.php');
+add_filter('auto_update_plugin', '_return_false');
+add_filter('auto_update_theme', '_return_false');
+define('WP_AUTO_UPDATE_CORE', 'major');
+
+/* -------------------- Upto Here Elementor ------------ */
+
+
